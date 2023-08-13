@@ -1,0 +1,352 @@
+/* CSS reset */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+*,
+html,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #23272f;
+  width: 100%;
+}
+
+.container {
+  max-width: 60%;
+  margin: 2rem auto;
+  background: #23272f;
+}
+
+/* Hero Section */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 0 5rem;
+  margin: 1rem 0;
+  color: white;
+}
+
+.hero-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #149eca;
+  padding: 0.7rem 1.4rem;
+  color: white;
+  width: 8rem;
+  height: 4rem;
+  margin-top: 1rem;
+  font-weight: 800;
+  font-size: 1rem;
+  border: none;
+  position: relative;
+}
+
+.hero-button span {
+  text-decoration: none;
+}
+
+.hero-button > * {
+  position: absolute;
+  z-index: 10;
+}
+
+.hero-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: white;
+  border-radius: 0 2rem 2rem 0;
+  transition: color 0.3s, width 0.3s, border-radius 0.3s ease-in-out;
+}
+
+.hero-button:hover {
+  color: black;
+}
+
+.hero-button:hover::after {
+  width: 100%;
+  border-radius: 0;
+}
+
+.hero-right {
+  border: 2px solid black;
+  border-radius: 100%;
+}
+
+/* Project Section */
+
+.main-body {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  background: #23272f;
+  width: 100%;
+}
+
+.project-heading {
+  text-align: center;
+  color: white;
+  padding-top: 2rem;
+  letter-spacing: 5px;
+}
+
+.project-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 5rem;
+}
+
+.project-route {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-img {
+  max-width: 30rem;
+  width: 100%;
+  transform-style: preserve-3d;
+  border: 2px solid gray;
+  padding: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.git-redirect {
+  position: absolute;
+  color: transparent;
+  z-index: 30;
+  transition: color 0.3s ease-in-out;
+  font-weight: 800;
+}
+
+ion-icon {
+  font-size: 2rem;
+}
+
+span {
+  display: flex;
+  align-items: center;
+  text-decoration: underline;
+}
+
+.project-route::after {
+  content: "";
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+  height: 100%;
+  width: 0%;
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.project-img:hover {
+  transform: scale(1.1);
+}
+
+.project-route:hover::after {
+  width: 100%;
+}
+
+.project-route:hover > .git-redirect {
+  color: black;
+}
+
+.project-info {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border: 2px solid gray;
+  border-radius: 1rem;
+}
+
+/* Skill Section */
+
+.skill-section {
+  background: #23272f;
+  position: relative;
+}
+
+.skill-heading {
+  text-align: center;
+  padding: 2rem;
+  color: white;
+  letter-spacing: 5px;
+}
+
+.skills-container {
+  display: grid;
+  place-items: center;
+  row-gap: 5rem;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.skill-card {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 0.5rem;
+  position: relative;
+  perspective: 500px;
+}
+
+.skill-content {
+  height: 100%;
+  width: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+}
+
+.skill-card:hover .skill-content {
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+}
+
+.skill-front,
+.skill-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.skill-back {
+  transform: rotateY(180deg);
+}
+
+.skill-img {
+  max-width: 5rem;
+}
+
+.skill:hover {
+  transform: rotateY(180deg);
+}
+
+.html {
+  background: orange;
+  color: white;
+}
+
+.css {
+  background: cyan;
+  color: black;
+}
+
+.javascript {
+  background: gray;
+  color: white;
+}
+
+.clang {
+  background: white;
+  color: black;
+}
+
+.cpp {
+  background: white;
+  color: black;
+}
+
+.python {
+  background: lightblue;
+  color: black;
+}
+
+.react {
+  background: darkblue;
+  color: white;
+}
+
+.next {
+  background: white;
+  color: black;
+}
+
+.prisma {
+  background: white;
+  color: black;
+  height: 93%;
+}
+
+/* footer */
+
+.copyright {
+  background: linear-gradient(45deg, black, white, black);
+  text-align: center;
+  padding: 1rem;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.social ion-icon {
+  color: black;
+}
+
+/* Media queries for responsiveness */
+
+@media only screen and (max-width: 1200px) {
+  .hero-right {
+    display: none;
+  }
+
+  .hero {
+    justify-content: center;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .project-box {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+}
