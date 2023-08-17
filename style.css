@@ -339,7 +339,8 @@ span {
 /* Media queries for responsiveness */
 
 @media only screen and (max-width: 1200px) {
-  .hero-right {
+  .hero-right,
+  .img-background {
     display: none;
   }
 
