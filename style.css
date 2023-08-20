@@ -190,6 +190,7 @@ span {
   padding: 1rem;
   border: 2px solid gray;
   border-radius: 1rem;
+  width: 23rem;
 }
 
 /* Skill Section */
@@ -327,7 +328,7 @@ span {
 
 /* Media queries for responsiveness */
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1600px) {
   .hero-right,
   .img-background {
     display: none;
@@ -335,6 +336,10 @@ span {
 
   .hero {
     justify-content: center;
+  }
+
+  .hero-button {
+    margin: 1rem auto;
   }
 
   .hero-left {
